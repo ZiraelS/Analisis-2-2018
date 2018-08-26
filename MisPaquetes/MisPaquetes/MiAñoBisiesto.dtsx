@@ -1,0 +1,778 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/8/2018 7:04:28 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SP-LAB9-11"
+  DTS:CreatorName="ULATINA0\laboratorio"
+  DTS:DTSID="{CDAEB92A-C73A-478F-8380-DA6DE9A89DEA}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.101"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="MiAñoBisiesto"
+  DTS:PackageType="5"
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{45659993-6CC4-4880-8152-EC3C0D9A75D3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{896AF245-199F-4750-A4F3-161B6F4AE8A9}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaParaAnalizar">
+      <DTS:VariableValue
+        DTS:DataType="7">6/8/2000 7:07:00 PM</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Determinar la cantidad de días del mes Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{BFBEE27B-57CC-43D8-A847-2A436ABD5DF9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Determinar la cantidad de días del mes Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Determinar meses del año NO bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{169DBD75-D96F-43E2-B8DA-18CFCB11BE68}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Determinar meses del año NO bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Determinar si el año  NO es múltiplo de 100"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{A6BBBF62-42DF-4C20-8B9E-0CCE9DD0C272}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Determinar si el año  NO es múltiplo de 100"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Determinar si el año es múltiplo de 4"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{60BE12CF-BF4A-404D-8CDE-44C40FC4C373}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Determinar si el año es múltiplo de 4"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Determinar si el año es múltiplo de 400"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1E727F89-F9F5-4374-AFD1-30704BC49EF2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Determinar si el año es múltiplo de 400"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Intermedio"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{535B8D16-9B68-4DE3-ABA7-6306311261F9}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Intermedio"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 28 NO Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{69AA67B8-979C-42CA-B1E8-9774FE775002}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 28 NO Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 29 Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{6941F2B8-1680-4FF2-A740-334E46491192}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 29 Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 30 Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3FDF791F-9AAD-42BC-B56D-47F0BAA48A93}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 30 Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 30 NO Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{F218552D-0D64-4BEF-AA2C-D1E6CC0D04FA}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 30 NO Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 31 Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{CCFEAA11-F086-4173-8D57-734717D6F960}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 31 Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Mes de 31 NO Bisiesto"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{4787D6C7-0ABA-4708-A030-074D3A64830B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Mes de 31 NO Bisiesto"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{F41F3013-FF87-4245-9243-FBAD36FA8B66}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  )  % 4 == 0"
+      DTS:From="Package\Determinar si el año es múltiplo de 4"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Determinar si el año es múltiplo de 400" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{CCA2A550-4C6A-44A8-8D78-EF03BDAB10AC}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  )  % 4 == 0"
+      DTS:From="Package\Determinar si el año es múltiplo de 4"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Determinar si el año  NO es múltiplo de 100" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 10]"
+      DTS:CreationName=""
+      DTS:DTSID="{7F15D15E-7502-46BD-887D-AF5C3D5739D5}"
+      DTS:From="Package\Intermedio"
+      DTS:ObjectName="Constraint 10"
+      DTS:To="Package\Determinar meses del año NO bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{A9249B93-71FB-4F47-9695-80E47BC007F4}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  ) % 400 == 0"
+      DTS:From="Package\Determinar si el año es múltiplo de 400"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Determinar la cantidad de días del mes Bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{0FBFFC3A-ACD7-4F54-AE9A-B7D74A097E53}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  ) % 100  != 0"
+      DTS:From="Package\Determinar si el año  NO es múltiplo de 100"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\Determinar la cantidad de días del mes Bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{28A253C7-7EA2-498E-B7B5-4036AE1AF4A9}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  )  % 4 != 0"
+      DTS:From="Package\Determinar si el año es múltiplo de 4"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\Determinar meses del año NO bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 5]"
+      DTS:CreationName=""
+      DTS:DTSID="{4CF11D25-A2BA-4BC7-A9BB-EC0459BABD44}"
+      DTS:EvalOp="1"
+      DTS:Expression="MONTH( @[User::FechaParaAnalizar]  ) ==2"
+      DTS:From="Package\Determinar la cantidad de días del mes Bisiesto"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 5"
+      DTS:To="Package\Mes de 29 Bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 6]"
+      DTS:CreationName=""
+      DTS:DTSID="{56203D69-0C11-42E8-97D3-44673CB65306}"
+      DTS:EvalOp="1"
+      DTS:Expression="MONTH( @[User::FechaParaAnalizar]  ) == 4  || MONTH( @[User::FechaParaAnalizar]  ) == 6  ||MONTH( @[User::FechaParaAnalizar]  ) == 9  || MONTH( @[User::FechaParaAnalizar]  ) == 11"
+      DTS:From="Package\Determinar la cantidad de días del mes Bisiesto"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 6"
+      DTS:To="Package\Mes de 30 Bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 7]"
+      DTS:CreationName=""
+      DTS:DTSID="{40A62396-2C45-4827-BD72-4A2BB437ED98}"
+      DTS:EvalOp="1"
+      DTS:Expression="MONTH( @[User::FechaParaAnalizar]  ) == 1  || MONTH( @[User::FechaParaAnalizar]  ) == 3  ||MONTH( @[User::FechaParaAnalizar]  ) == 5  || MONTH( @[User::FechaParaAnalizar]  ) == 7 || MONTH( @[User::FechaParaAnalizar]  ) == 8 || MONTH( @[User::FechaParaAnalizar]  ) == 10 || MONTH( @[User::FechaParaAnalizar]  ) == 12"
+      DTS:From="Package\Determinar la cantidad de días del mes Bisiesto"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 7"
+      DTS:To="Package\Mes de 31 Bisiesto" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 8]"
+      DTS:CreationName=""
+      DTS:DTSID="{3B03C2CA-D002-4FE5-B6D8-95CD2A77D5E2}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  ) % 400 != 0"
+      DTS:From="Package\Determinar si el año es múltiplo de 400"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 8"
+      DTS:To="Package\Intermedio" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 9]"
+      DTS:CreationName=""
+      DTS:DTSID="{C5082728-B1C7-46E2-9213-320928BF7EEB}"
+      DTS:EvalOp="1"
+      DTS:Expression="YEAR( @[User::FechaParaAnalizar]  ) % 100  == 0"
+      DTS:From="Package\Determinar si el año  NO es múltiplo de 100"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 9"
+      DTS:To="Package\Intermedio" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph" xmlns:mssge="clr-namespace:Microsoft.SqlServer.Graph.Extended;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+        <NodeLayout
+          Size="302,42"
+          Id="Package\Determinar la cantidad de días del mes Bisiesto"
+          TopLeft="453.904761904762,352" />
+        <NodeLayout
+          Size="259,42"
+          Id="Package\Determinar meses del año NO bisiesto"
+          TopLeft="942.142857142857,14.2857142857143" />
+        <NodeLayout
+          Size="286,42"
+          Id="Package\Determinar si el año  NO es múltiplo de 100"
+          TopLeft="579.238095238096,223.428571428571" />
+        <NodeLayout
+          Size="253,42"
+          Id="Package\Determinar si el año es múltiplo de 4"
+          TopLeft="469.761904761905,21.9523809523813" />
+        <NodeLayout
+          Size="264,42"
+          Id="Package\Determinar si el año es múltiplo de 400"
+          TopLeft="267.904761904762,222" />
+        <NodeLayout
+          Size="131,42"
+          Id="Package\Intermedio"
+          TopLeft="894.714285714286,97.2857142857141" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Mes de 28 NO Bisiesto"
+          TopLeft="1093.57142857143,327.142857142857" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Mes de 29 Bisiesto"
+          TopLeft="340.761904761905,442.428571428572" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Mes de 30 Bisiesto"
+          TopLeft="537.238095238095,450" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Mes de 30 NO Bisiesto"
+          TopLeft="1080.7619047619,176.142857142857" />
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Mes de 31 Bisiesto"
+          TopLeft="736.523809523809,452.142857142857" />
+        <NodeLayout
+          Size="184,42"
+          Id="Package\Mes de 31 NO Bisiesto"
+          TopLeft="967.190476190476,265.428571428571" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="555.428571428571,63.9523809523813">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-198.190476190476,158.047619047619"
+              Start="0,0"
+              End="-198.190476190476,150.547619047619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.0494416384781" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.0494416384781"
+                    Point2="0,79.0494416384781"
+                    Point3="-4,79.0494416384781" />
+                  <mssgle:LineSegment
+                    End="-194.190476190476,79.0494416384781" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-194.190476190476,79.0494416384781"
+                    Point2="-198.190476190476,79.0494416384781"
+                    Point3="-198.190476190476,83.0494416384781" />
+                  <mssgle:LineSegment
+                    End="-198.190476190476,150.547619047619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-107.095238095238,84.0494416384781,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="637.095238095238,63.9523809523813">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="38.8095238095244,159.47619047619"
+              Start="0,0"
+              End="38.8095238095244,151.97619047619">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,75.8097591942707" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,75.8097591942707"
+                    Point2="0,79.8097591942707"
+                    Point3="4,79.8097591942707" />
+                  <mssgle:LineSegment
+                    End="34.8095238095244,79.8097591942707" />
+                  <mssgle:CubicBezierSegment
+                    Point1="34.8095238095244,79.8097591942707"
+                    Point2="38.8095238095244,79.8097591942707"
+                    Point3="38.8095238095244,83.8097591942707" />
+                  <mssgle:LineSegment
+                    End="38.8095238095244,151.97619047619" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="11.4047619047622,84.8097591942707,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 10]"
+          TopLeft="960.214285714286,97.2857142857141">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="111.428571428571,-40.9999999999998"
+              Start="0,0"
+              End="111.428571428571,-33.4999999999998">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-16.4999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-16.4999999999999"
+                    Point2="0,-20.4999999999999"
+                    Point3="4,-20.4999999999999" />
+                  <mssgle:LineSegment
+                    End="107.428571428571,-20.4999999999999" />
+                  <mssgle:CubicBezierSegment
+                    Point1="107.428571428571,-20.4999999999999"
+                    Point2="111.428571428571,-20.4999999999999"
+                    Point3="111.428571428571,-24.4999999999999" />
+                  <mssgle:LineSegment
+                    End="111.428571428571,-33.4999999999998" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="399.904761904762,264">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="156,88"
+              Start="0,0"
+              End="156,80.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,48.5217391304348" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,48.5217391304348"
+                    Point2="0,52.5217391304348"
+                    Point3="4,52.5217391304348" />
+                  <mssgle:LineSegment
+                    End="152,52.5217391304348" />
+                  <mssgle:CubicBezierSegment
+                    Point1="152,52.5217391304348"
+                    Point2="156,52.5217391304348"
+                    Point3="156,56.5217391304348" />
+                  <mssgle:LineSegment
+                    End="156,80.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="70,57.5217391304348,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="722.238095238095,265.428571428571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-68.3333333333339,86.5714285714286"
+              Start="0,0"
+              End="-68.3333333333339,79.0714285714286">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.6691134952004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.6691134952004"
+                    Point2="0,51.6691134952004"
+                    Point3="-4,51.6691134952004" />
+                  <mssgle:LineSegment
+                    End="-64.3333333333339,51.6691134952004" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-64.3333333333339,51.6691134952004"
+                    Point2="-68.3333333333339,51.6691134952004"
+                    Point3="-68.3333333333339,55.6691134952004" />
+                  <mssgle:LineSegment
+                    End="-68.3333333333339,79.0714285714286" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-42.166666666667,56.6691134952004,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="722.761904761905,39.1190476190478">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="219.380952380953,0"
+              Start="0,0"
+              End="211.880952380953,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="211.880952380953,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="97.9404761904763,5,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 5]"
+          TopLeft="531.404761904762,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="-107.642857142857,48.4285714285716"
+              Start="0,0"
+              End="-107.642857142857,40.9285714285716">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.4254454517037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.4254454517037"
+                    Point2="0,16.4254454517037"
+                    Point3="-4,16.4254454517037" />
+                  <mssgle:LineSegment
+                    End="-103.642857142857,16.4254454517037" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-103.642857142857,16.4254454517037"
+                    Point2="-107.642857142857,16.4254454517037"
+                    Point3="-107.642857142857,20.4254454517037" />
+                  <mssgle:LineSegment
+                    End="-107.642857142857,40.9285714285716" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-61.8214285714285,21.4254454517037,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 6]"
+          TopLeft="604.904761904762,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="15.3333333333334,56.0000000000001"
+              Start="0,0"
+              End="15.3333333333334,48.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,24.0000000000001"
+                    Point2="0,28.0000000000001"
+                    Point3="4,28.0000000000001" />
+                  <mssgle:LineSegment
+                    End="11.3333333333334,28.0000000000001" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.3333333333334,28.0000000000001"
+                    Point2="15.3333333333334,28.0000000000001"
+                    Point3="15.3333333333334,32.0000000000001" />
+                  <mssgle:LineSegment
+                    End="15.3333333333334,48.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-0.333333333333314,33.0000000000001,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="678.404761904761,394">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="141.119047619048,58.1428571428574"
+              Start="0,0"
+              End="141.119047619048,50.6428571428574">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.7202250703346" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.7202250703346"
+                    Point2="0,19.7202250703346"
+                    Point3="4,19.7202250703346" />
+                  <mssgle:LineSegment
+                    End="137.119047619048,19.7202250703346" />
+                  <mssgle:CubicBezierSegment
+                    Point1="137.119047619048,19.7202250703346"
+                    Point2="141.119047619048,19.7202250703346"
+                    Point3="141.119047619048,23.7202250703346" />
+                  <mssgle:LineSegment
+                    End="141.119047619048,50.6428571428574" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="62.5595238095238,24.7202250703346,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="442.571428571428,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="497.142857142857,-82.7142857142859"
+              Start="0,0"
+              End="497.142857142857,-75.2142857142859">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-37.046151733719" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-37.046151733719"
+                    Point2="0,-41.046151733719"
+                    Point3="4,-41.046151733719" />
+                  <mssgle:LineSegment
+                    End="493.142857142857,-41.046151733719" />
+                  <mssgle:CubicBezierSegment
+                    Point1="493.142857142857,-41.046151733719"
+                    Point2="497.142857142857,-41.046151733719"
+                    Point3="497.142857142857,-45.046151733719" />
+                  <mssgle:LineSegment
+                    End="497.142857142857,-75.2142857142859" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="240.571428571429,-36.046151733719,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="768.571428571429,223.428571428571">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{x:Null}"
+              EndConnector="212.142857142857,-84.1428571428573"
+              Start="0,0"
+              End="212.142857142857,-76.6428571428573">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-37.7309026482657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-37.7309026482657"
+                    Point2="0,-41.7309026482657"
+                    Point3="4,-41.7309026482657" />
+                  <mssgle:LineSegment
+                    End="208.142857142857,-41.7309026482657" />
+                  <mssgle:CubicBezierSegment
+                    Point1="208.142857142857,-41.7309026482657"
+                    Point2="212.142857142857,-41.7309026482657"
+                    Point3="212.142857142857,-45.7309026482657" />
+                  <mssgle:LineSegment
+                    End="212.142857142857,-76.6428571428573" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="98.0714285714284,-36.7309026482657,16,16"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <AnnotationLayout
+          Text="Este paquete se encarga de determinar el tipo de dia del año que corresponde a una variable"
+          ParentId="Package"
+          Size="482,37"
+          Id="457cdb0b-09a6-4a09-ba30-6081a60141db"
+          TopLeft="343.238095238096,54">
+          <AnnotationLayout.FontInfo>
+            <mssge:FontInfo
+              Color="#FF000000">
+              <mssge:FontInfo.TextDecorations>
+                <av:TextDecorationCollection />
+              </mssge:FontInfo.TextDecorations>
+            </mssge:FontInfo>
+          </AnnotationLayout.FontInfo>
+        </AnnotationLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

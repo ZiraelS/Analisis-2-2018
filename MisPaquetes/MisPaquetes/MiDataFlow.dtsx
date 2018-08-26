@@ -1,0 +1,3130 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="6/29/2018 7:59:43 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SP-LAB9-PROF"
+  DTS:CreatorName="ULATINA0\laboratorio"
+  DTS:DTSID="{B6211DAA-9545-4443-9870-1B9F8DE1CC32}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="14.0.3002.101"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="MiDataFlow"
+  DTS:PackageType="5"
+  DTS:VersionBuild="16"
+  DTS:VersionGUID="{B7000EB8-347A-42FE-A3B5-B81C5AEE2042}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).AdventureWorks2017]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A5D73473-BB0B-4EB4-A0B8-3C306BF98298}"
+      DTS:ObjectName="(local).AdventureWorks2017">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=AdventureWorks2017;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(local).MyDb]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F76B9BEA-FC6D-46EB-9B01-81FFBEEE2E3D}"
+      DTS:ObjectName="(local).MyDb">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=MyDb;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{9F7D0339-6AC2-48D7-981E-DC556793945A}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaFinal">
+      <DTS:VariableValue
+        DTS:DataType="7">1/1/2012</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{62D61F1D-47E2-4002-9A9D-9DD4AC126B0B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="FechaInicial">
+      <DTS:VariableValue
+        DTS:DataType="7">1/6/2011</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{7B583FB7-0E82-4392-8028-637BEF167E29}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalAtrasadas">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8BAB2209-37A4-41A6-B686-2DA45E408722}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalJIT">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{8A17C038-E145-442C-B5AA-518BC2188DD7}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalNoAtrasadas">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{E9A8D555-99CF-4D2D-AF9F-285E21FC9153}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="TotalPoquitoAtrasadas">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3A083CE1-37DB-4ECB-B3A3-5231B7886EB7}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Pausa"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E71A8A68-CA17-43E6-8D00-A969AE1A1D8C}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Pausa"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Procese los datos"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{3D9A4627-6C0B-4D85-B983-9361CF412AF2}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Procese los datos"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Procese los datos\Calcule el porcentaje de impuesto"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calcule el porcentaje de impuesto"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]"
+                      name="TaxPercentage"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[ROUND](#{Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]} / #{Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]} * 100,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">ROUND(TaxAmt / TotalDue * 100,2)</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Calcule los días de retraso en el envío de la orden - Paso 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]"
+                      name="DelayDates"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[DATEDIFF]("d",#{Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]},#{Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]})</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">DATEDIFF("d",DueDate,ShipDate)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      name="MensajeDeAtraso"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">""</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">""</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Calcule los días de retraso en el envío de la orden - Paso 2"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Sin Retraso]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Sin Retraso"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]} &lt; 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">DelayDates &lt; 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Justo A Tiempo]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Justo A Tiempo"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]} == 0</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">DelayDates == 0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Un poquito de atraso]"
+                  description="Output 3 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Un poquito de atraso"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">#{Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]} &lt;= 2</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">DelayDates &lt;= 2</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">2</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Atrasado]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Atrasado"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Contar Atrasadas"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Contar Atrasadas">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalAtrasadas</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Contar Atrasadas.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Contar Atrasadas.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Procese los datos\Contar Atrasadas.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Contar Just In Time"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Contar Just In Time">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalJIT</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Contar Just In Time.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Contar Just In Time.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Procese los datos\Contar Just In Time.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Contar no atrasados"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Contar no atrasados">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalNoAtrasadas</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Contar no atrasados.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Contar no atrasados.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Procese los datos\Contar no atrasados.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Contar Poquito Atrasadas"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Contar Poquito Atrasadas">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::TotalPoquitoAtrasadas</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Contar Poquito Atrasadas.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Contar Poquito Atrasadas.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Procese los datos\Contar Poquito Atrasadas.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Funda los flujos del mensaje de atraso"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Funda los flujos del mensaje de atraso"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5]"
+                  hasSideEffects="true"
+                  name="Union All Input 5">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[TaxPercentage]"
+                      cachedDataType="r4"
+                      cachedName="TaxPercentage"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5].Columns[MensajeDeAtraso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MensajeDeAtraso"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1]"
+                  hasSideEffects="true"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[TaxPercentage]"
+                      cachedDataType="r4"
+                      cachedName="TaxPercentage"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1].Columns[MensajeDeAtraso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MensajeDeAtraso"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[TaxPercentage]"
+                      cachedDataType="r4"
+                      cachedName="TaxPercentage"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2].Columns[MensajeDeAtraso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MensajeDeAtraso"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3]"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[TaxPercentage]"
+                      cachedDataType="r4"
+                      cachedName="TaxPercentage"
+                      lineageId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output].Columns[TaxPercentage]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3].Columns[MensajeDeAtraso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MensajeDeAtraso"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 4]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 4">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]"
+                      name="DueDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]"
+                      dataType="ui1"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]"
+                      name="SalesPersonID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]"
+                      name="ShipToAddressID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]"
+                      name="TaxAmt" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]"
+                      name="Freight" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]"
+                      name="TotalDue" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]"
+                      dataType="r4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]"
+                      name="TaxPercentage" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]"
+                      name="DelayDates" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]"
+                      name="MensajeDeAtraso" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Grabe los registros en la BD Destino"
+              componentClassID="Microsoft.SQLServerDestination"
+              contactInfo="SQL Server Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;5"
+              description="SQL Server Destination"
+              name="Grabe los registros en la BD Destino"
+              version="5">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.String"
+                  description="The name of the database object to copy data into."
+                  expressionType="Notify"
+                  name="BulkInsertTableName">[DestinoPruebaPaquete]</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any constraints on the destination object are checked during the data copy operation. Corresponds to the bulk insert CHECK_CONSTRAINTS option."
+                  name="BulkInsertCheckConstraints">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the first row to copy. Corresponds to the bulk insert FIRSTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertFirstRow">-1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that any insert triggers defined on the destination object will execute during the data copy. Corresponds to the bulk insert FIRE_TRIGGERS option."
+                  name="BulkInsertFireTriggers">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Corresponds to the bulk insert KEEPIDENTITY option."
+                  name="BulkInsertKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null copied to the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="BulkInsertKeepNulls">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of the last row to copy. Corresponds to the bulk insert LASTROW option."
+                  expressionType="Notify"
+                  name="BulkInsertLastRow">-1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of syntax errors and compilation errors that can occur before the data copy operation is canceled. Each row that cannot be copied is ignored and counted as one error. Corresponds to the bulk insert MAXERRORS option."
+                  name="BulkInsertMaxErrors">-1</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies how the data to be copied is sorted. Corresponds to the bulk insert ORDER option."
+                  expressionType="Notify"
+                  name="BulkInsertOrder"></property>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies that a table-level lock is acquired for the duration of the data copy operation. Corresponds to the bulk insert TABLOCK option."
+                  name="BulkInsertTablock">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies in seconds the amount of time the SQL Destination adapter will wait before terminating if there is no data available for insertion.  A timeout value of 0 means the SQL Destination adapter will not time out."
+                  expressionType="Notify"
+                  name="Timeout">30</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion."
+                  name="MaxInsertCommitSize">0</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Procese los datos\Grabe los registros en la BD Destino.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).MyDb]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).MyDb]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input]"
+                  hasSideEffects="true"
+                  name="SQL Server Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[SalesOrderID]"
+                      cachedDataType="i4"
+                      cachedName="SalesOrderID"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesOrderID]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[OrderDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="OrderDate"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[OrderDate]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[OrderDate]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[DueDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="DueDate"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[DueDate]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DueDate]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[ShipDate]"
+                      cachedDataType="dbTimeStamp"
+                      cachedName="ShipDate"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[ShipDate]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipDate]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[Status]"
+                      cachedDataType="ui1"
+                      cachedName="Status"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[CustomerID]"
+                      cachedDataType="i4"
+                      cachedName="CustomerID"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[CustomerID]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[CustomerID]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[SalesPersonID]"
+                      cachedDataType="i4"
+                      cachedName="SalesPersonID"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SalesPersonID]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[ShipToAddressID]"
+                      cachedDataType="i4"
+                      cachedName="ShipToAddressID"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[ShipToAddressID]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[SubTotal]"
+                      cachedDataType="cy"
+                      cachedName="SubTotal"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SubTotal]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[SubTotal]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[TaxAmt]"
+                      cachedDataType="cy"
+                      cachedName="TaxAmt"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TaxAmt]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxAmt]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[Freight]"
+                      cachedDataType="cy"
+                      cachedName="Freight"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[Freight]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[Freight]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[TotalDue]"
+                      cachedDataType="cy"
+                      cachedName="TotalDue"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TotalDue]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TotalDue]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[TaxPercentage]"
+                      cachedDataType="r4"
+                      cachedName="TaxPercentage"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TaxPercentage]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[TaxPercentage]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[DelayDates]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[DelayDates]" />
+                    <inputColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].Columns[MensajeDeAtraso]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MensajeDeAtraso"
+                      externalMetadataColumnId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[MensajeDeAtraso]"
+                      lineageId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1].Columns[MensajeDeAtraso]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[TaxPercentage]"
+                      dataType="r4"
+                      name="TaxPercentage" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[DelayDates]"
+                      dataType="i4"
+                      name="DelayDates" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input].ExternalColumns[MensajeDeAtraso]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="MensajeDeAtraso" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Just In time"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Just In time"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Just In time.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Just In time.Inputs[Derived Column Input].Columns[MensajeDeAtraso]"
+                      cachedDataType="wstr"
+                      cachedName="MensajeDeAtraso"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Just In time"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Just In time"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Just In time.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Just In time.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Just In time.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Just In time.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Just In time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Just In time.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Just In time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Just In time.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Lea los datos de las órdenes"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Lea los datos de las órdenes"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        SalesOrderID, OrderDate, DueDate, ShipDate, Status, CustomerID, SalesPersonID, ShipToAddressID, SubTotal, TaxAmt, Freight, TotalDue
+FROM            Sales.SalesOrderHeader AS soh
+WHERE        (OrderDate &gt;= ? AND OrderDate &lt;= ?)
+ORDER BY Status, ShipDate</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{62D61F1D-47E2-4002-9A9D-9DD4AC126B0B};"Parameter1:Input",{9F7D0339-6AC2-48D7-981E-DC556793945A};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Procese los datos\Lea los datos de las órdenes.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[(local).AdventureWorks2017]"
+                  connectionManagerRefId="Package.ConnectionManagers[(local).AdventureWorks2017]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesOrderID]"
+                      name="SalesOrderID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[OrderDate]"
+                      name="OrderDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[DueDate]"
+                      name="DueDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipDate]"
+                      name="ShipDate"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]"
+                      dataType="ui1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[CustomerID]"
+                      name="CustomerID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SalesPersonID]"
+                      name="SalesPersonID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[SubTotal]"
+                      name="SubTotal"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TaxAmt]"
+                      name="TaxAmt"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[Freight]"
+                      name="Freight"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      dataType="cy"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].Columns[TotalDue]"
+                      name="TotalDue"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SalesOrderID]"
+                      dataType="i4"
+                      name="SalesOrderID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      name="OrderDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[DueDate]"
+                      dataType="dbTimeStamp"
+                      name="DueDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      name="ShipDate" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[Status]"
+                      dataType="ui1"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[CustomerID]"
+                      dataType="i4"
+                      name="CustomerID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SalesPersonID]"
+                      dataType="i4"
+                      name="SalesPersonID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[ShipToAddressID]"
+                      dataType="i4"
+                      name="ShipToAddressID" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[SubTotal]"
+                      dataType="cy"
+                      name="SubTotal" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[TaxAmt]"
+                      dataType="cy"
+                      name="TaxAmt" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[Freight]"
+                      dataType="cy"
+                      name="Freight" />
+                    <externalMetadataColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output].ExternalColumns[TotalDue]"
+                      dataType="cy"
+                      name="TotalDue" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SalesOrderID]"
+                      name="SalesOrderID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[OrderDate]"
+                      name="OrderDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[DueDate]"
+                      name="DueDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      dataType="dbTimeStamp"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ShipDate]"
+                      name="ShipDate" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      dataType="ui1"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[CustomerID]"
+                      name="CustomerID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SalesPersonID]"
+                      name="SalesPersonID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ShipToAddressID]"
+                      name="ShipToAddressID" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[SubTotal]"
+                      name="SubTotal" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[TaxAmt]"
+                      name="TaxAmt" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[Freight]"
+                      name="Freight" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      dataType="cy"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[TotalDue]"
+                      name="TotalDue" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Mensaje de atrasada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Mensaje de atrasada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Mensaje de atrasada.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Mensaje de atrasada.Inputs[Derived Column Input].Columns[MensajeDeAtraso]"
+                      cachedDataType="wstr"
+                      cachedName="MensajeDeAtraso"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Atrasada completamente"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Atrasada completamente"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de atrasada.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de atrasada.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Mensaje de no hay atraso"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Mensaje de no hay atraso"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input].Columns[MensajeDeAtraso]"
+                      cachedDataType="wstr"
+                      cachedName="MensajeDeAtraso"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"No hay atraso"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"No hay atraso"</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input].Columns[DelayDates]"
+                      cachedDataType="i4"
+                      cachedName="DelayDates"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[DelayDates]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">0</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Procese los datos\Mensaje de Un poquito atrasada"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Mensaje de Un poquito atrasada"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Inputs[Derived Column Input].Columns[MensajeDeAtraso]"
+                      cachedDataType="wstr"
+                      cachedName="MensajeDeAtraso"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output].Columns[MensajeDeAtraso]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"Levemente atrasadirijilla"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"Levemente atrasadirijilla"</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de Un poquito atrasada.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Procese los datos\Mensaje de Un poquito atrasada.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Procese los datos.Paths[Atrasado]"
+              endId="Package\Procese los datos\Mensaje de atrasada.Inputs[Derived Column Input]"
+              name="Atrasado"
+              startId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Atrasado]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output]"
+              endId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Inputs[Derived Column Input]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Calcule el porcentaje de impuesto.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output1]"
+              endId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Inputs[Conditional Split Input]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output2]"
+              endId="Package\Procese los datos\Contar no atrasados.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Mensaje de no hay atraso.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output3]"
+              endId="Package\Procese los datos\Contar Just In Time.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Just In time.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output4]"
+              endId="Package\Procese los datos\Contar Atrasadas.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Mensaje de atrasada.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Derived Column Output5]"
+              endId="Package\Procese los datos\Contar Poquito Atrasadas.Inputs[Row Count Input 1]"
+              name="Derived Column Output"
+              startId="Package\Procese los datos\Mensaje de Un poquito atrasada.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Justo A Tiempo]"
+              endId="Package\Procese los datos\Just In time.Inputs[Derived Column Input]"
+              name="Justo A Tiempo"
+              startId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Justo A Tiempo]" />
+            <path
+              refId="Package\Procese los datos.Paths[OLE DB Source Output]"
+              endId="Package\Procese los datos\Calcule el porcentaje de impuesto.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Procese los datos\Lea los datos de las órdenes.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Procese los datos.Paths[Row Count Output 1]"
+              endId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 5]"
+              name="Row Count Output 1"
+              startId="Package\Procese los datos\Contar no atrasados.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Procese los datos.Paths[Row Count Output 11]"
+              endId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 1]"
+              name="Row Count Output 1"
+              startId="Package\Procese los datos\Contar Just In Time.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Procese los datos.Paths[Row Count Output 12]"
+              endId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 2]"
+              name="Row Count Output 1"
+              startId="Package\Procese los datos\Contar Atrasadas.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Procese los datos.Paths[Row Count Output 13]"
+              endId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Inputs[Union All Input 3]"
+              name="Row Count Output 1"
+              startId="Package\Procese los datos\Contar Poquito Atrasadas.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Procese los datos.Paths[Sin Retraso]"
+              endId="Package\Procese los datos\Mensaje de no hay atraso.Inputs[Derived Column Input]"
+              name="Sin Retraso"
+              startId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Sin Retraso]" />
+            <path
+              refId="Package\Procese los datos.Paths[Un poquito de atraso]"
+              endId="Package\Procese los datos\Mensaje de Un poquito atrasada.Inputs[Derived Column Input]"
+              name="Un poquito de atraso"
+              startId="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2.Outputs[Un poquito de atraso]" />
+            <path
+              refId="Package\Procese los datos.Paths[Union All Output 1]"
+              endId="Package\Procese los datos\Grabe los registros en la BD Destino.Inputs[SQL Server Destination Input]"
+              name="Union All Output 1"
+              startId="Package\Procese los datos\Funda los flujos del mensaje de atraso.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{88EE31F2-808E-47B7-8D9C-5E8A11E67F47}"
+      DTS:From="Package\Procese los datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Pausa" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C6819C5E-839C-4CE3-A0BD-D76B1D43D3C3}"
+      DTS:From="Package\Procese los datos"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Data Flow Task"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="107,42"
+          Id="Package\Pausa"
+          TopLeft="176.153846153846,167.692307692308" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Procese los datos"
+          TopLeft="144,61" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="227.076923076923,103">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.6923076923077"
+              Start="0,0"
+              End="0,57.1923076923077">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.1923076923077" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="151,42"
+          Id="Package\Data Flow Task"
+          TopLeft="445,65" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="305,84">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="140,0"
+              Start="0,0"
+              End="132.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="132.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="51.00865234375,5,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Procese los datos">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="135,42"
+          Id="Package\Procese los datos\Just In time"
+          TopLeft="242.142857142858,429.142857142857" />
+        <NodeLayout
+          Size="355,42"
+          Id="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 2"
+          TopLeft="305.714285714286,325" />
+        <NodeLayout
+          Size="260,42"
+          Id="Package\Procese los datos\Funda los flujos del mensaje de atraso"
+          TopLeft="305.064935064935,662.077922077922" />
+        <NodeLayout
+          Size="200,42"
+          Id="Package\Procese los datos\Mensaje de no hay atraso"
+          TopLeft="2.8421709430404E-14,425" />
+        <NodeLayout
+          Size="198,42"
+          Id="Package\Procese los datos\Contar Poquito Atrasadas"
+          TopLeft="645.714285714286,516.220779220779" />
+        <NodeLayout
+          Size="249,42"
+          Id="Package\Procese los datos\Grabe los registros en la BD Destino"
+          TopLeft="311.428571428572,788.571428571429" />
+        <NodeLayout
+          Size="174,42"
+          Id="Package\Procese los datos\Contar no atrasados"
+          TopLeft="32.8571428571428,512.857142857143" />
+        <NodeLayout
+          Size="176,42"
+          Id="Package\Procese los datos\Mensaje de atrasada"
+          TopLeft="426.428571428572,429.714285714286" />
+        <NodeLayout
+          Size="172,42"
+          Id="Package\Procese los datos\Contar Just In Time"
+          TopLeft="235,506.935064935065" />
+        <NodeLayout
+          Size="355,42"
+          Id="Package\Procese los datos\Calcule los días de retraso en el envío de la orden - Paso 1"
+          TopLeft="301.428571428572,234.285714285714" />
+        <NodeLayout
+          Size="213,42"
+          Id="Package\Procese los datos\Lea los datos de las órdenes"
+          TopLeft="362.571428571429,36" />
+        <NodeLayout
+          Size="160,42"
+          Id="Package\Procese los datos\Contar Atrasadas"
+          TopLeft="442.857142857143,510.506493506493" />
+        <NodeLayout
+          Size="238,42"
+          Id="Package\Procese los datos\Calcule el porcentaje de impuesto"
+          TopLeft="355,142.857142857143" />
+        <NodeLayout
+          Size="231,42"
+          Id="Package\Procese los datos\Mensaje de Un poquito atrasada"
+          TopLeft="624.285714285713,428.428571428572" />
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Union All Output 1]"
+          TopLeft="435.496753246753,704.077922077922">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,84.4935064935071"
+              Start="0,0"
+              End="0,76.9935064935071">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,76.9935064935071" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Un poquito de atraso]"
+          TopLeft="587.314285714286,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="152.471428571427,61.4285714285716"
+              Start="0,0"
+              End="152.471428571427,53.9285714285716">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.9707339292832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.9707339292832"
+                    Point2="0,17.9707339292832"
+                    Point3="4,17.9707339292832" />
+                  <mssgle:LineSegment
+                    End="148.471428571427,17.9707339292832" />
+                  <mssgle:CubicBezierSegment
+                    Point1="148.471428571427,17.9707339292832"
+                    Point2="152.471428571427,17.9707339292832"
+                    Point3="152.471428571427,21.9707339292832" />
+                  <mssgle:LineSegment
+                    End="152.471428571427,53.9285714285716" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="29.3097377232135,22.9707339292832,93.851953125,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Sin Retraso]"
+          TopLeft="379.114285714286,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-279.114285714286,58.0000000000001"
+              Start="0,0"
+              End="-279.114285714286,50.5000000000001">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.9677162216023" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.9677162216023"
+                    Point2="0,16.9677162216023"
+                    Point3="-4,16.9677162216023" />
+                  <mssgle:LineSegment
+                    End="-275.114285714286,16.9677162216023" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-275.114285714286,16.9677162216023"
+                    Point2="-279.114285714286,16.9677162216023"
+                    Point3="-279.114285714286,20.9677162216023" />
+                  <mssgle:LineSegment
+                    End="-279.114285714286,50.5000000000001" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-165.289838169643,21.9677162216023,51.465390625,9.5537109375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Row Count Output 13]"
+          TopLeft="744.714285714286,558.220779220779">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-234.04935064935,103.857142857143"
+              Start="0,0"
+              End="-234.04935064935,96.3571428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,69.218159281066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,69.218159281066"
+                    Point2="0,73.218159281066"
+                    Point3="-4,73.218159281066" />
+                  <mssgle:LineSegment
+                    End="-230.04935064935,73.218159281066" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-230.04935064935,73.218159281066"
+                    Point2="-234.04935064935,73.218159281066"
+                    Point3="-234.04935064935,77.218159281066" />
+                  <mssgle:LineSegment
+                    End="-234.04935064935,96.3571428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Row Count Output 12]"
+          TopLeft="522.857142857143,552.506493506493">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-62.5922077922074,109.571428571429"
+              Start="0,0"
+              End="-62.5922077922074,102.071428571429">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,56.6656120710635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,56.6656120710635"
+                    Point2="0,60.6656120710635"
+                    Point3="-4,60.6656120710635" />
+                  <mssgle:LineSegment
+                    End="-58.5922077922074,60.6656120710635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-58.5922077922074,60.6656120710635"
+                    Point2="-62.5922077922074,60.6656120710635"
+                    Point3="-62.5922077922074,64.6656120710635" />
+                  <mssgle:LineSegment
+                    End="-62.5922077922074,102.071428571429" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Row Count Output 11]"
+          TopLeft="321,548.935064935065">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88.8649350649354,113.142857142857"
+              Start="0,0"
+              End="88.8649350649354,105.642857142857">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,58.6429788269652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,58.6429788269652"
+                    Point2="0,62.6429788269652"
+                    Point3="4,62.6429788269652" />
+                  <mssgle:LineSegment
+                    End="84.8649350649354,62.6429788269652" />
+                  <mssgle:CubicBezierSegment
+                    Point1="84.8649350649354,62.6429788269652"
+                    Point2="88.8649350649354,62.6429788269652"
+                    Point3="88.8649350649354,66.6429788269652" />
+                  <mssgle:LineSegment
+                    End="88.8649350649354,105.642857142857" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Row Count Output 1]"
+          TopLeft="119.857142857143,554.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="239.607792207793,107.220779220779"
+              Start="0,0"
+              End="239.607792207793,99.7207792207789">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,71.5894864354732" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,71.5894864354732"
+                    Point2="0,75.5894864354732"
+                    Point3="4,75.5894864354732" />
+                  <mssgle:LineSegment
+                    End="235.607792207793,75.5894864354732" />
+                  <mssgle:CubicBezierSegment
+                    Point1="235.607792207793,75.5894864354732"
+                    Point2="239.607792207793,75.5894864354732"
+                    Point3="239.607792207793,79.5894864354732" />
+                  <mssgle:LineSegment
+                    End="239.607792207793,99.7207792207789" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[OLE DB Source Output]"
+          TopLeft="471.535714285715,78">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.8571428571433"
+              Start="0,0"
+              End="0,57.3571428571433">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.3571428571433" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Justo A Tiempo]"
+          TopLeft="448.514285714286,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-138.871428571429,62.1428571428572"
+              Start="0,0"
+              End="-138.871428571429,54.6428571428572">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.7052763034655" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.7052763034655"
+                    Point2="0,27.7052763034655"
+                    Point3="-4,27.7052763034655" />
+                  <mssgle:LineSegment
+                    End="-134.871428571429,27.7052763034655" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-134.871428571429,27.7052763034655"
+                    Point2="-138.871428571429,27.7052763034655"
+                    Point3="-138.871428571429,31.7052763034655" />
+                  <mssgle:LineSegment
+                    End="-138.871428571429,54.6428571428572" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-104.269425223214,32.7052763034655,69.667421875,11.3310546875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output5]"
+          TopLeft="742.249999999999,470.428571428572">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,45.7922077922068"
+              Start="0,0"
+              End="0,38.2922077922068">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.2922077922068" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output4]"
+          TopLeft="514.428571428572,471.714285714286">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.42857142857088,38.7922077922071"
+              Start="0,0"
+              End="8.42857142857088,31.2922077922071">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,15.3961038961036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,15.3961038961036"
+                    Point2="0,19.3961038961036"
+                    Point3="4,19.3961038961036" />
+                  <mssgle:LineSegment
+                    End="4.42857142857088,19.3961038961036" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.42857142857088,19.3961038961036"
+                    Point2="8.42857142857088,19.3961038961036"
+                    Point3="8.42857142857088,23.3961038961036" />
+                  <mssgle:LineSegment
+                    End="8.42857142857088,31.2922077922071" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output3]"
+          TopLeft="309.642857142858,471.142857142857">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.357142857142,35.7922077922076"
+              Start="0,0"
+              End="11.357142857142,28.2922077922076">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.8961038961038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.8961038961038"
+                    Point2="0,17.8961038961038"
+                    Point3="4,17.8961038961038" />
+                  <mssgle:LineSegment
+                    End="7.35714285714204,17.8961038961038" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.35714285714204,17.8961038961038"
+                    Point2="11.357142857142,17.8961038961038"
+                    Point3="11.357142857142,21.8961038961038" />
+                  <mssgle:LineSegment
+                    End="11.357142857142,28.2922077922076" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output2]"
+          TopLeft="100,467">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="19.8571428571428,45.8571428571428"
+              Start="0,0"
+              End="19.8571428571428,38.3571428571428">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.9285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.9285714285714"
+                    Point2="0,22.9285714285714"
+                    Point3="4,22.9285714285714" />
+                  <mssgle:LineSegment
+                    End="15.8571428571428,22.9285714285714" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.8571428571428,22.9285714285714"
+                    Point2="19.8571428571428,22.9285714285714"
+                    Point3="19.8571428571428,26.9285714285714" />
+                  <mssgle:LineSegment
+                    End="19.8571428571428,38.3571428571428" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output1]"
+          TopLeft="481.071428571429,276.285714285714">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,48.7142857142856"
+              Start="0,0"
+              End="0,41.2142857142856">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.2142857142856" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Derived Column Output]"
+          TopLeft="476.464285714286,184.857142857143">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,49.4285714285707"
+              Start="0,0"
+              End="0,41.9285714285707">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.9285714285707" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Procese los datos.Paths[Atrasado]"
+          TopLeft="516.171428571429,367">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,62.7142857142859"
+              Start="0,0"
+              End="0,55.2142857142859">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,55.2142857142859" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-20.31509765625,22.732631138393,40.6301953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Procese los datos\Grabe los registros en la BD Destino">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Procese los datos\Lea los datos de las órdenes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
